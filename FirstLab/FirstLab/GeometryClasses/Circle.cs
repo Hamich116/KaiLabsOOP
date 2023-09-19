@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -25,7 +26,7 @@ namespace FirstLab.GeometryClasses
         public Ellipse Show()
         {
             Ellipse ellipse = new Ellipse();
-            ellipse.Margin = new System.Windows.Thickness(X, Y, 0, 0);
+            ellipse.Margin = new Thickness(X, Y, 0, 0);
             ellipse.Width = Radius;
             ellipse.Height = Radius;
             ellipse.Fill = Brushes.Black;
@@ -33,6 +34,20 @@ namespace FirstLab.GeometryClasses
             ellipse.StrokeThickness = 1;
             ellipse.MouseLeftButtonDown += Ellipse_MouseLeftButtonDown;
             return ellipse;
+        }
+
+        public static void MoveTo(int x, int y, Ellipse ellipse)
+        {
+            Thickness thickness = ellipse.Margin;
+            thickness.Left += Convert.ToInt32(x);
+            thickness.Top += Convert.ToInt32(y);
+            ellipse.Margin = thickness;
+        }
+
+        public static void Resize(int radius, Ellipse ellipse)
+        {
+            ellipse.Width = Convert.ToInt32(radius);
+            ellipse.Height = Convert.ToInt32(radius);
         }
 
         private void Ellipse_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

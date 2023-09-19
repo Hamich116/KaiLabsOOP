@@ -33,7 +33,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
                 <Button Content="Создать круг" FontWeight="Bold" Click="CreateCircleClick"/>
-                <Button Margin="10,0,0,0">
+                <Button Margin="10,0,0,0" Click="CreateManyCircle">
                     <TextBlock Text="Создать много кругов" FontWeight="Bold" Width="120" TextAlignment="Center" TextWrapping="Wrap"/>
                 </Button>
             </StackPanel>
@@ -52,7 +52,11 @@
             </StackPanel>
             <Button Content="Изменить размер" FontWeight="Bold" Click="ChangeRadiusCircle" Margin="10,10,10,0"></Button>
         </StackPanel>
-        <Button Grid.Column="1" VerticalAlignment="Bottom" Margin="10,0,20,10" Click="DeleteCircle" Content="Удалить круг"></Button>
+        <StackPanel  Grid.Column="1" VerticalAlignment="Bottom" Margin="10,0,20,10">
+            <Button Click="ClearAllClick" Margin="10,0,20,10" FontWeight="Bold" Content="Удалить все круги"></Button>
+            <Button  Margin="10,0,20,10" FontWeight="Bold" Click="DeleteCircle" Content="Удалить круг"></Button>
+        </StackPanel>
+        
         <Grid Grid.Row="0" x:Name="geometryPlace">
         </Grid>
 

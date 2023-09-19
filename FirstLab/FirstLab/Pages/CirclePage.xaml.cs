@@ -50,16 +50,32 @@ namespace FirstLab.Pages
 
         private void MoveCircleToAnything(object sender, RoutedEventArgs e)
         {
-            Thickness thickness = clickedThisEllipse.Margin;
-            thickness.Left += Convert.ToInt32(plusXBox.Text);
-            thickness.Top += Convert.ToInt32(plusYBox.Text);
-            clickedThisEllipse.Margin = thickness;
+            Circle.MoveTo(Convert.ToInt32(plusXBox.Text), Convert.ToInt32(plusYBox.Text), clickedThisEllipse);
         }
 
         private void ChangeRadiusCircle(object sender, RoutedEventArgs e)
         {
-            clickedThisEllipse.Width = Convert.ToInt32(newRadiusBox.Text);
-            clickedThisEllipse.Height = Convert.ToInt32(newRadiusBox.Text);
+            Circle.Resize(Convert.ToInt32(newRadiusBox.Text), clickedThisEllipse);
+        }
+
+        private void CreateManyCircle(object sender, RoutedEventArgs e)
+        {
+            Random rnd = new Random();
+            List <Circle> list = new List<Circle>();
+            for (int i = 0; i < rnd.Next(2,5); i++)
+            {
+                Circle circle = new Circle(rnd.Next(-1000,1000), rnd.Next(-500,500), rnd.Next(10,100));
+                list.Add(circle);
+            }
+            foreach (var item in list)
+            {
+               geometryPlace.Children.Add(item.Show());
+            }
+        }
+
+        private void ClearAllClick(object sender, RoutedEventArgs e)
+        {
+            geometryPlace.Children.Clear();
         }
     }
 }

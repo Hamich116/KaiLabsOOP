@@ -18,3 +18,23 @@ C:\Users\ihama\Рабочий стол\Labs OOP\FirstLab\FirstLab\obj\Debug\Firs
 C:\Users\ihama\Рабочий стол\Labs OOP\FirstLab\FirstLab\obj\Debug\FirstLab.pdb
 C:\Users\ihama\Рабочий стол\Labs OOP\FirstLab\FirstLab\obj\Debug\Pages\CirclePage.g.cs
 C:\Users\ihama\Рабочий стол\Labs OOP\FirstLab\FirstLab\obj\Debug\Pages\CirclePage.baml
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\bin\Debug\FirstLab.exe.config
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\bin\Debug\FirstLab.exe
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\bin\Debug\FirstLab.pdb
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.csproj.AssemblyReference.cache
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.csproj.SuggestedBindingRedirects.cache
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\MainWindow.g.cs
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\CirclePage.g.cs
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\MainPage.g.cs
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\App.g.cs
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab_MarkupCompile.cache
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab_MarkupCompile.lref
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\MainWindow.baml
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\CirclePage.baml
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\MainPage.baml
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.g.resources
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.Properties.Resources.resources
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.csproj.GenerateResource.cache
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.csproj.CoreCompileInputs.cache
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.exe
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.pdb
