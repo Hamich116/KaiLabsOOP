@@ -29,8 +29,17 @@ namespace FirstLab.Pages
         public static Ellipse clickedThisEllipse;
         private void CreateCircleClick(object sender, RoutedEventArgs e)
         {
-            Circle circle = new Circle(Convert.ToInt32(xBox.Text), Convert.ToInt32(yBox.Text), Convert.ToInt32(radiusBox.Text));
-            geometryPlace.Children.Add(circle.Show());
+            try
+            {
+                Circle circle = new Circle(Convert.ToInt32(xBox.Text), Convert.ToInt32(yBox.Text), Convert.ToInt32(radiusBox.Text));
+                geometryPlace.Children.Add(circle.Show());
+                circle = null;
+            }
+            catch
+            {
+                MessageBox.Show("Введите x,y и радиус");
+            }
+            
         }
 
         private void Ellipse_GotMouseCapture(object sender, MouseEventArgs e)
@@ -46,16 +55,33 @@ namespace FirstLab.Pages
         private void DeleteCircle(object sender, RoutedEventArgs e)
         {
             geometryPlace.Children.Remove(clickedThisEllipse);
+            clickedThisEllipse = null;
         }
 
         private void MoveCircleToAnything(object sender, RoutedEventArgs e)
         {
-            Circle.MoveTo(Convert.ToInt32(plusXBox.Text), Convert.ToInt32(plusYBox.Text), clickedThisEllipse);
+            try
+            {
+                Circle.MoveTo(Convert.ToInt32(plusXBox.Text), Convert.ToInt32(plusYBox.Text), clickedThisEllipse);
+            }
+            catch
+            {
+                MessageBox.Show("Выберете круг, путем нажатия по нему левой кнопкой мыши, а также заполните +=x,+=y");
+            }
+            
         }
 
         private void ChangeRadiusCircle(object sender, RoutedEventArgs e)
         {
-            Circle.Resize(Convert.ToInt32(newRadiusBox.Text), clickedThisEllipse);
+            try
+            {
+                Circle.Resize(Convert.ToInt32(newRadiusBox.Text), clickedThisEllipse);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Выберете круг, путем нажатия по нему левой кнопкой мыши, а также заполните новый радиус");
+            }
+            
         }
 
         private void CreateManyCircle(object sender, RoutedEventArgs e)
@@ -71,11 +97,18 @@ namespace FirstLab.Pages
             {
                geometryPlace.Children.Add(item.Show());
             }
+            rnd = null;
+            list = null;
         }
 
         private void ClearAllClick(object sender, RoutedEventArgs e)
         {
             geometryPlace.Children.Clear();
+        }
+
+        private void ClearObjectWhenPageNotUsed(object sender, RoutedEventArgs e)
+        {
+            clickedThisEllipse = null;
         }
     }
 }

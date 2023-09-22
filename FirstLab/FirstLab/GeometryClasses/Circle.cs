@@ -38,16 +38,31 @@ namespace FirstLab.GeometryClasses
 
         public static void MoveTo(int x, int y, Ellipse ellipse)
         {
-            Thickness thickness = ellipse.Margin;
-            thickness.Left += Convert.ToInt32(x);
-            thickness.Top += Convert.ToInt32(y);
-            ellipse.Margin = thickness;
+            if (ellipse != null)
+            {
+                Thickness thickness = ellipse.Margin;
+                thickness.Left += Convert.ToInt32(x);
+                thickness.Top += Convert.ToInt32(y);
+                ellipse.Margin = thickness;
+            }
+            else
+            {
+                MessageBox.Show("Выберете круг, который хотите переместить, путем нажатия на круг левой кнопки мыши");
+            }    
         }
 
         public static void Resize(int radius, Ellipse ellipse)
         {
-            ellipse.Width = Convert.ToInt32(radius);
-            ellipse.Height = Convert.ToInt32(radius);
+            if (ellipse != null)
+            {
+                ellipse.Width = Convert.ToInt32(radius);
+                ellipse.Height = Convert.ToInt32(radius);
+            }
+            else
+            {
+                MessageBox.Show("Выберете круг, который хотите переместить, путем нажатия на круг левой кнопки мыши");
+            }
+            
         }
 
         private void Ellipse_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
