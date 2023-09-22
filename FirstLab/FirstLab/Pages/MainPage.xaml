@@ -14,9 +14,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="36" Width="464">
-            <Button Content="Круг" Click="ShowKrugPageClick" Margin="15,0,0,0" FontSize="25"></Button>
+            <Button Content="Круг" Click="ShowCirclePageClick" Margin="15,0,0,0" FontSize="25"></Button>
             <Button Content="Элипс" Click="ShowElipsePageClick" Margin="15,0,0,0" FontSize="25"></Button>
-            <Button Content="Линия" Click="ShowLinePageClick" Margin="15,0,0,0" FontSize="25"></Button>
+            <Button Content="Квадрат" Click="ShowSquarePageClick" Margin="15,0,0,0" FontSize="25"></Button>
             <Button Content="Прямоугольники" Click="ShowPramougolnikPageClick" Margin="15,0,0,0" FontSize="25"></Button>
         </StackPanel>
         <Frame Grid.Row="1" x:Name="ObjectShowFrame"></Frame>

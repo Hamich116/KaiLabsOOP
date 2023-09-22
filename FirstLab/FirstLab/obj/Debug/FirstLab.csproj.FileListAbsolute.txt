@@ -38,3 +38,5 @@ C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\o
 C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.csproj.CoreCompileInputs.cache
 C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.exe
 C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\FirstLab.pdb
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\SquarePage.g.cs
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\SquarePage.baml

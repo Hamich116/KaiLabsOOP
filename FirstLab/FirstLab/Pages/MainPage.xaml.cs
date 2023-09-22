@@ -25,7 +25,7 @@ namespace FirstLab.Pages
             InitializeComponent();
         }
 
-        private void ShowKrugPageClick(object sender, RoutedEventArgs e)
+        private void ShowCirclePageClick(object sender, RoutedEventArgs e)
         {
             ObjectShowFrame.Navigate(new CirclePage());
         }
@@ -35,9 +35,9 @@ namespace FirstLab.Pages
 
         }
 
-        private void ShowLinePageClick(object sender, RoutedEventArgs e)
+        private void ShowSquarePageClick(object sender, RoutedEventArgs e)
         {
-
+            ObjectShowFrame.Navigate(new SquarePage());
         }
 
         private void ShowPramougolnikPageClick(object sender, RoutedEventArgs e)

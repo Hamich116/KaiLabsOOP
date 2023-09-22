@@ -41,17 +41,6 @@ namespace FirstLab.Pages
             }
             
         }
-
-        private void Ellipse_GotMouseCapture(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show("Тест");
-        }
-
-        private void Ellipse_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            clickedThisEllipse = (Ellipse)sender;
-        }
-
         private void DeleteCircle(object sender, RoutedEventArgs e)
         {
             geometryPlace.Children.Remove(clickedThisEllipse);
