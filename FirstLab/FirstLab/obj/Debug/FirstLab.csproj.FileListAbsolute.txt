@@ -42,3 +42,5 @@ C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\o
 C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\SquarePage.baml
 C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\OvalPage.g.cs
 C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\OvalPage.baml
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\RectanglePage.g.cs
+C:\Users\ihama\OneDrive\Документы\GitHub\KaiLabsOOP\FirstLab\FirstLab\obj\Debug\Pages\RectanglePage.baml

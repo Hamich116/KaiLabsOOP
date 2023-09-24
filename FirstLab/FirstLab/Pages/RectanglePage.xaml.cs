@@ -9,70 +9,70 @@ using System.Windows.Shapes;
 namespace FirstLab.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для SquarePage.xaml
+    /// Логика взаимодействия для RectanglePage.xaml
     /// </summary>
-    public partial class SquarePage : Page
+    public partial class RectanglePage : Page
     {
-        public SquarePage()
+        public RectanglePage()
         {
             InitializeComponent();
         }
         public static Rectangle clickedThisRectangle;
-        private void CreateSquareClick(object sender, RoutedEventArgs e)
+        private void CreateRectangleClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                Square square = new Square(Convert.ToInt32(xBox.Text), Convert.ToInt32(yBox.Text), Convert.ToInt32(sideBox.Text));
-                geometryPlace.Children.Add(square.Show());
-                square = null;
+                MyRectangle rectangle = new MyRectangle(Convert.ToInt32(xBox.Text), Convert.ToInt32(yBox.Text), Convert.ToInt32(lenghtBox.Text), Convert.ToInt32(widthBox.Text));
+                geometryPlace.Children.Add(rectangle.Show());
+                rectangle = null;
             }
             catch
             {
-                MessageBox.Show("Введите x,y и размер квадрата");
+                MessageBox.Show("Введите x,y и размер прямоугольника");
             }
 
         }
 
-        private void DeletSquare(object sender, RoutedEventArgs e)
+        private void DeleteRectangle(object sender, RoutedEventArgs e)
         {
             geometryPlace.Children.Remove(clickedThisRectangle);
             clickedThisRectangle = null;
         }
 
-        private void MoveSquareToAnything(object sender, RoutedEventArgs e)
+        private void MoveRectangleToAnything(object sender, RoutedEventArgs e)
         {
             try
             {
-                Square.MoveTo(Convert.ToInt32(plusXBox.Text), Convert.ToInt32(plusYBox.Text), clickedThisRectangle);
+                MyRectangle.MoveTo(Convert.ToInt32(plusXBox.Text), Convert.ToInt32(plusYBox.Text), clickedThisRectangle);
             }
             catch
             {
-                MessageBox.Show("Выберете квадрат, путем нажатия по нему левой кнопкой мыши, а также заполните +=x,+=y");
+                MessageBox.Show("Выберете прямоугольник, путем нажатия по нему левой кнопкой мыши, а также заполните +=x,+=y");
             }
 
         }
 
-        private void ChangeSideSquare(object sender, RoutedEventArgs e)
+        private void ChangeSideRectangle(object sender, RoutedEventArgs e)
         {
             try
             {
-                Square.Resize(Convert.ToInt32(newSideBox.Text), clickedThisRectangle);
+                MyRectangle.Resize(Convert.ToInt32(newLenghtBox.Text), Convert.ToInt32(newWidthBox.Text), clickedThisRectangle);
             }
             catch (Exception)
             {
-                MessageBox.Show("Выберете квадрат, путем нажатия по нему левой кнопкой мыши, а также заполните новый размер стороны");
+                MessageBox.Show("Выберете прямоугольник, путем нажатия по нему левой кнопкой мыши, а также заполните новый длину и ширину");
             }
 
         }
 
-        private void CreateManySquare(object sender, RoutedEventArgs e)
+        private void CreateManyRectangle(object sender, RoutedEventArgs e)
         {
             Random rnd = new Random();
-            List<Square> list = new List<Square>();
+            List<MyRectangle> list = new List<MyRectangle>();
             for (int i = 0; i < rnd.Next(2, 5); i++)
             {
-                Square square = new Square(rnd.Next(-1000, 1000), rnd.Next(-500, 500), rnd.Next(10, 100));
-                list.Add(square);
+                MyRectangle rectangle = new MyRectangle(rnd.Next(-1000, 1000), rnd.Next(-500, 500), rnd.Next(10, 100), rnd.Next(10, 100));
+                list.Add(rectangle);
             }
             foreach (var item in list)
             {
@@ -92,7 +92,7 @@ namespace FirstLab.Pages
             clickedThisRectangle = null;
         }
 
-        private void AllTextBoxPreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void AllSizeBoxPreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             if (!Char.IsDigit(e.Text, 0))

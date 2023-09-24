@@ -6,25 +6,28 @@ using System.Windows.Shapes;
 
 namespace FirstLab.GeometryClasses
 {
-    internal class Square
+    internal class MyRectangle
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public int Sides { get; set; }
+        public int Width { get; set; }
 
-        public Square(int x, int y, int sides)
+        public int Length { get; set; }
+
+        public MyRectangle(int x, int y, int lenght, int width)
         {
             X = x;
             Y = y;
-            Sides = sides;
+            Width = width;
+            Length = lenght;
         }
 
         public Rectangle Show()
         {
             Rectangle rectangle = new Rectangle();
             rectangle.Margin = new Thickness(X, Y, 0, 0);
-            rectangle.Width = Sides;
-            rectangle.Height = Sides;
+            rectangle.Width = Width;
+            rectangle.Height = Length;
             rectangle.Fill = Brushes.Red;
             rectangle.Stroke = Brushes.Black;
             rectangle.StrokeThickness = 1;
@@ -43,27 +46,27 @@ namespace FirstLab.GeometryClasses
             }
             else
             {
-                MessageBox.Show("Выберете квадрат, который хотите переместить, путем нажатия на квадрат левой кнопки мыши");
+                MessageBox.Show("Выберете прямоугольник, который хотите переместить, путем нажатия на прямоугольник левой кнопки мыши");
             }
         }
 
-        public static void Resize(int side, Rectangle rectangle)
+        public static void Resize(int lenght, int width, Rectangle rectangle)
         {
             if (rectangle != null)
             {
-                rectangle.Width = Convert.ToInt32(side);
-                rectangle.Height = Convert.ToInt32(side);
+                rectangle.Width = Convert.ToInt32(lenght);
+                rectangle.Height = Convert.ToInt32(width);
             }
             else
             {
-                MessageBox.Show("Выберете квадрат, который хотите переместить, путем нажатия на квадрат левой кнопки мыши");
+                MessageBox.Show("Выберете прямоугольник, который хотите переместить, путем нажатия на прямоугольник левой кнопки мыши");
             }
 
         }
 
         private void Rectangle_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            SquarePage.clickedThisRectangle = (Rectangle)sender;
+            RectanglePage.clickedThisRectangle = (Rectangle)sender;
         }
     }
 }

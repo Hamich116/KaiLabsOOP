@@ -1,0 +1,75 @@
+﻿<Page x:Class="FirstLab.Pages.RectanglePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FirstLab.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="800"
+      Title="RectanglePage">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Value="25" Property="TextBlock.FontSize"></Setter>
+        </Style>
+
+    </Page.Resources>
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="213"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="Gray" Grid.Column="1" >
+            <StackPanel Orientation="Horizontal" Margin="5,5,5,0">
+                <TextBlock Text="x:"/>
+                <TextBox x:Name="xBox" Margin="10,0,0,0" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Width="130"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
+                <TextBlock Text="y:"/>
+                <TextBox x:Name="yBox" Margin="10,0,0,0" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Width="130"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
+                <TextBlock Text="Длина:"/>
+                <TextBox x:Name="lenghtBox" Margin="10,0,0,0" PreviewTextInput="AllSizeBoxPreviewTextInput" Width="98"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
+                <TextBlock Text="Ширина:"/>
+                <TextBox x:Name="widthBox" Margin="10,0,0,0" PreviewTextInput="AllSizeBoxPreviewTextInput" Width="98"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
+                <Button  Click="CreateRectangleClick" Width="90">
+                    <TextBlock Text="Создать прямоугольник" FontWeight="Bold" FontSize="20" TextWrapping="Wrap"></TextBlock>
+                </Button>
+                <Button Margin="10,0,0,0" Click="CreateManyRectangle">
+                    <TextBlock Text="Создать много прямоугольников" FontWeight="Bold" Width="100" FontSize="20" TextAlignment="Center" TextWrapping="Wrap"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,5,5,0">
+                <TextBlock Text="+=x:"/>
+                <TextBox x:Name="plusXBox" Margin="10,0,0,0" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Width="113"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
+                <TextBlock Text="+=y:"/>
+                <TextBox x:Name="plusYBox" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Margin="10,0,0,0" Width="113"/>
+            </StackPanel>
+            <Button Content="Передвинуть" FontWeight="Bold" Click="MoveRectangleToAnything" Margin="10,10,10,0"></Button>
+            <StackPanel Margin="10,10,0,10" Orientation="Horizontal">
+                <TextBlock Text="новая длина" Width="80" TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBox x:Name="newLenghtBox" PreviewTextInput="AllSizeBoxPreviewTextInput" Margin="10,0,0,0" Width="100"/>
+            </StackPanel>
+            <StackPanel Margin="10,10,0,10" Orientation="Horizontal">
+                <TextBlock Text="новая ширина" Width="91" TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBox x:Name="newWidthBox" PreviewTextInput="AllSizeBoxPreviewTextInput" Margin="10,0,0,0" Width="89"/>
+            </StackPanel>
+            <Button Content="Изменить размер" FontWeight="Bold" Click="ChangeSideRectangle" Margin="10,10,10,0"></Button>
+        </StackPanel>
+        <StackPanel  Grid.Column="1" VerticalAlignment="Bottom" Margin="10,0,0,10">
+            <Button Click="ClearAllClick" Margin="10,0,20,10" FontWeight="Bold" FontSize="11" Content="Удалить все прямоугольники"></Button>
+            <Button  Margin="10,0,20,10" FontWeight="Bold" Click="DeleteRectangle" Content="Удалить прямоугольник"></Button>
+        </StackPanel>
+
+        <Grid Grid.Row="0" x:Name="geometryPlace">
+        </Grid>
+
+    </Grid>
+</Page>

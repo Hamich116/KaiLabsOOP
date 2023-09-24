@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GeometryClasses\Circle.cs" />
+    <Compile Include="GeometryClasses\MyRectangle.cs" />
     <Compile Include="GeometryClasses\Oval.cs" />
     <Compile Include="GeometryClasses\Square.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -82,6 +83,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\RectanglePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SquarePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +101,9 @@
     </Compile>
     <Compile Include="Pages\OvalPage.xaml.cs">
       <DependentUpon>OvalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RectanglePage.xaml.cs">
+      <DependentUpon>RectanglePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SquarePage.xaml.cs">
       <DependentUpon>SquarePage.xaml</DependentUpon>
