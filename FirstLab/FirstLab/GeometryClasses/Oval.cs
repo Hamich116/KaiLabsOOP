@@ -6,25 +6,29 @@ using System.Windows.Shapes;
 
 namespace FirstLab.GeometryClasses
 {
-    internal class Circle
+    internal class Oval
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public int Radius { get; set; }
+        public int Lenght { get; set; }
 
-        public Circle(int x, int y, int radius)
+        public int Width { get; set; }
+
+
+        public Oval(int x, int y, int lenght, int width)
         {
             X = x;
             Y = y;
-            Radius = radius;
+            Lenght = lenght;
+            Width = width;
         }
 
         public Ellipse Show()
         {
             Ellipse ellipse = new Ellipse();
             ellipse.Margin = new Thickness(X, Y, 0, 0);
-            ellipse.Width = Radius;
-            ellipse.Height = Radius;
+            ellipse.Width = Lenght;
+            ellipse.Height = Width;
             ellipse.Fill = Brushes.Black;
             ellipse.Stroke = Brushes.Red;
             ellipse.StrokeThickness = 1;
@@ -43,27 +47,27 @@ namespace FirstLab.GeometryClasses
             }
             else
             {
-                MessageBox.Show("Выберете круг, который хотите переместить, путем нажатия на круг левой кнопки мыши");
-            }    
+                MessageBox.Show("Выберете овал, который хотите переместить, путем нажатия на овал левой кнопки мыши");
+            }
         }
 
-        public static void Resize(int radius, Ellipse ellipse)
+        public static void Resize(int lenght, int width, Ellipse ellipse)
         {
             if (ellipse != null)
             {
-                ellipse.Width = Convert.ToInt32(radius);
-                ellipse.Height = Convert.ToInt32(radius);
+                ellipse.Width = Convert.ToInt32(width);
+                ellipse.Height = Convert.ToInt32(lenght);
             }
             else
             {
-                MessageBox.Show("Выберете круг, который хотите переместить, путем нажатия на круг левой кнопки мыши");
+                MessageBox.Show("Выберете овал, который хотите переместить, путем нажатия на овал левой кнопки мыши");
             }
-            
+
         }
 
         private void Ellipse_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            CirclePage.clickedThisEllipse = (Ellipse) sender;
+            OvalPage.clickedThisEllipse = (Ellipse)sender;
         }
     }
 }

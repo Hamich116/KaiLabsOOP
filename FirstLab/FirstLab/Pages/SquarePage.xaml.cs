@@ -99,5 +99,23 @@ namespace FirstLab.Pages
         {
             clickedThisRectangle = null;
         }
+
+        private void AllTextBoxPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (!Char.IsDigit(e.Text, 0))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void AllCoordionatesBoxPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (!(e.Text[0] <= 47 || e.Text[0] <= 57 && e.Text[0] != 45))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

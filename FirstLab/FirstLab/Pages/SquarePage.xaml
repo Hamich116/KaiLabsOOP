@@ -21,15 +21,15 @@
         <StackPanel Background="Gray" Grid.Column="1" >
             <StackPanel Orientation="Horizontal" Margin="5,5,5,0">
                 <TextBlock Text="x:"/>
-                <TextBox x:Name="xBox" Margin="10,0,0,0" Width="130"/>
+                <TextBox x:Name="xBox" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Margin="10,0,0,0" Width="130"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
                 <TextBlock Text="y:"/>
-                <TextBox x:Name="yBox" Margin="10,0,0,0" Width="130"/>
+                <TextBox x:Name="yBox" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Margin="10,0,0,0" Width="130"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
                 <TextBlock Text="Размер стороны:" Width="104" TextWrapping="Wrap"/>
-                <TextBox x:Name="sideBox" Margin="10,0,0,0" Width="98"/>
+                <TextBox x:Name="sideBox" PreviewTextInput="AllTextBoxPreviewTextInput" Margin="10,0,0,0" Width="98"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
                 <Button  Click="CreateSquareClick" Width="110">
@@ -41,16 +41,16 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,5,5,0">
                 <TextBlock Text="+=x:"/>
-                <TextBox x:Name="plusXBox" Margin="10,0,0,0" Width="113"/>
+                <TextBox x:Name="plusXBox" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Margin="10,0,0,0" Width="113"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,0">
                 <TextBlock Text="+=y:"/>
-                <TextBox x:Name="plusYBox" Margin="10,0,0,0" Width="113"/>
+                <TextBox x:Name="plusYBox" PreviewTextInput="AllCoordionatesBoxPreviewTextInput" Margin="10,0,0,0" Width="113"/>
             </StackPanel>
             <Button Content="Передвинуть" FontWeight="Bold" Click="MoveSquareToAnything" Margin="10,10,10,0"></Button>
             <StackPanel Margin="10,10,0,10" Orientation="Horizontal">
                 <TextBlock Text="новый размер стороны" Width="100" TextWrapping="Wrap" TextAlignment="Center"/>
-                <TextBox x:Name="newSideBox" Margin="10,0,0,0" Width="100"/>
+                <TextBox x:Name="newSideBox" PreviewTextInput="AllTextBoxPreviewTextInput" Margin="10,0,0,0" Width="100"/>
             </StackPanel>
             <Button Content="Изменить размер" FontWeight="Bold" Click="ChangeSideSquare" Margin="10,10,10,0"></Button>
         </StackPanel>

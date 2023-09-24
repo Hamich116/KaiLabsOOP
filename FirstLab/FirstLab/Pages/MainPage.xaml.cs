@@ -32,7 +32,7 @@ namespace FirstLab.Pages
 
         private void ShowElipsePageClick(object sender, RoutedEventArgs e)
         {
-
+            ObjectShowFrame.Navigate(new OvalPage());
         }
 
         private void ShowSquarePageClick(object sender, RoutedEventArgs e)
